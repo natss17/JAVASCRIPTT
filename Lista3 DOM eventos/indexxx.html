@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <title>Esconder Elemento</title>
+</head>
+<body>
+
+<p id="elemento">Este parágrafo será escondido ao dar um duplo clique no botão.</p>
+<button id="botaoEsconder">Clique duas vezes para esconder</button>
+
+<script>
+    const botao = document.getElementById("botaoEsconder")
+    const elemento = document.getElementById("elemento")
+    botao.addEventListener("dblclick", function() {
+        elemento.style.display = "none"
+    })
+</script>
+
+</body>
+</html>

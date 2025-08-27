@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Personalização</title>
+</head>
+<body>
+
+<h1 id="titulo">Este é o título</h1>
+<p id="texto">Este é o texto do parágrafo</p>
+<button id="personalizar">Personalizar Página</button>
+
+<script>
+    const botao = document.getElementById("personalizar")
+    const titulo = document.getElementById("titulo")
+    const texto = document.getElementById("texto")
+
+    botao.addEventListener("click", function() {
+        texto.style.color = "blue"
+        texto.style.fontSize = "20px"
+        titulo.style.color = "green"
+        titulo.style.fontSize = "35px"
+    })
+</script>
+
+</body>
+</html>

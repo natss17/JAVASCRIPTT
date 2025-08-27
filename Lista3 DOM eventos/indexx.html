@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Troca de Texto com Mouseover</title>
+</head>
+<body>
+
+<button id="botaoMouse">Passe o mouse aqui</button>
+
+<script>
+
+    const botao = document.getElementById("botaoMouse")
+    botao.addEventListener("mouseover", function() {
+        botao.textContent = "Você passou o mouse!"
+    })
+
+    botao.addEventListener("mouseout", function() {
+        botao.textContent = "Passe o mouse aqui"
+    })
+</script>
+
+</body>
+</html>

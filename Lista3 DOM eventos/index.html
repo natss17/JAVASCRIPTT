@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exibir Digitação</title>
+</head>
+<body>
+
+<input type="text" id="campoTexto" placeholder="Digite algo...">
+<p id="paragrafo">O que você digitar aparecerá aqui.</p>
+
+<script>
+    const campo = document.getElementById("campoTexto")
+    const paragrafo = document.getElementById("paragrafo")
+ 
+    campo.addEventListener("input", function() {
+        paragrafo.textContent = campo.value
+    })
+</script>
+
+</body>
+</html>
+ 

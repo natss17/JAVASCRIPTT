@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Remover Parágrafo</title>
+</head>
+<body>
+
+<p id="paragrafoRemover">est parágrafo será removido ao clicar no botão.</p>
+<button id="removerBotao">Remover Parágrafo</button>
+
+<script>
+    const botao = document.getElementById("removerBotao")
+    const paragrafo = document.getElementById("paragrafoRemover")
+
+    botao.addEventListener("click", function() {
+        paragrafo.remove()
+    })
+</script>
+
+</body>
+</html>

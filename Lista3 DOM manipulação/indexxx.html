@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Adicionar Item de Lista</title>
+</head>
+<body>
+
+<ul id="minhaLista">
+    <li>Item 1</li>
+    <li>Item 2</li>
+</ul>
+
+<button id="adicionarItem">Adicionar Item</button>
+
+<script>
+    const botao = document.getElementById("adicionarItem")
+    const lista = document.getElementById("minhaLista")
+
+    botao.addEventListener("click", function() {
+        const novoItem = document.createElement("li")
+        novoItem.textContent = "Novo item"
+        lista.appendChild(novoItem)
+    })
+</script>
+
+</body>
+</html>

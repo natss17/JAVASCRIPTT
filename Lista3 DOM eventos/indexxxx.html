@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Alterar Fonte Aleatória</title>
+</head>
+<body>
+
+<p id="texto">Este texto terá o tamanho da fonte alterado aleatoriamente.</p>
+<button id="botaoFonte">Alterar Fonte</button>
+
+<script>
+    const botao = document.getElementById("botaoFonte")
+    const texto = document.getElementById("texto")
+
+    function tamanhoAleatorio(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min
+    }
+
+    botao.addEventListener("click", function() {
+        const novoTamanho = tamanhoAleatorio(10, 40)
+        texto.style.fontSize = novoTamanho + "px"
+    })
+</script>
+
+</body>
+</html>
