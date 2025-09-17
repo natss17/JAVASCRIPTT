@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem Responsiva com Fundo Rosa Claro</title>
+    <style>
+        body {
+            background-color: #ffe6f0; 
+        }
+        .responsive-img {
+            width: 300px; 
+            max-width: 100%; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Imagem com largura fixa e responsiva</h1>
+    <img src="imgLP.jpeg" alt="Lola e Pandora" class="responsive-img">
+    <p>Quando a tela diminui, o fundo rosa claro definido por body { background-color: #ffe6f0; } permanece inalterado, preenchendo toda a página em qualquer tamanho de tela. A imagem com src="imgLP.jpeg" e classe .responsive-img mantém a largura fixa de 300px (width: 300px) em telas maiores que 300px, mas encolhe para a largura disponível da tela (ex.: 280px ou 200px) em telas menores, devido ao max-width: 100%, preservando a proporção e evitando transbordo. O título pode quebrar em várias linhas em telas pequenas, seguindo o comportamento padrão do navegador.</p>
+</body>
+</html>

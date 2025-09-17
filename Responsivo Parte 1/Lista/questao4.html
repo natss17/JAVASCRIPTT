@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questao 4 </title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            min-height: 100vh;
+        }
+
+        .section {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            color: white;
+        }
+
+        #home {
+            background-color: #f1a1cd;
+        }
+
+        #sobre {
+            background-color: #97ccf0;
+        }
+
+        #contato {
+            background-color: #e2eb97;
+        }
+
+        
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+            }
+            .section {
+                background-color: #f1c40f; 
+            }
+        }
+
+        
+        @media (min-width: 601px) and (max-width: 1024px) {
+            .container {
+                flex-direction: column;
+            }
+            .section {
+                background-color: #9b59b6; 
+            }
+        }
+
+       
+        @media (min-width: 1025px) {
+        }
+            .container {
+                flex-direction: row;
+            }
+            .section {
+                background-color: #3498db; 
+            #sobre {
+                background-color: #5effa1; 
+            }
+            #contato {
+                background-color: #f07062; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="section" id="home">
+            <h1>Home</h1>
+            <p>Welcome página inicial! 😁</p>
+        </div>
+        <div class="section" id="sobre">
+            <h1>Sobre</h1>
+            <p>Conheça mais sobre nós e nosso objetivo. ✌️</p>
+        </div>
+        <div class="section" id="contato">
+            <h1>Contato</h1>
+            <p>Entre em contato conosco para mais informações. 😎</p>
+        </div>
+    </div>
+</body>
+</html>

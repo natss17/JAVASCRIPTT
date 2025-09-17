@@ -1,0 +1,27 @@
+html {
+    font-size: 16px; 
+    background-color: #f0f0f0;
+}
+
+body {
+    font-size: 1em; 
+    background-color: #ffffff; 
+}
+
+/* px */
+.px {
+    font-size: 16px;
+    background-color: #ff9999;
+}
+
+/* em */
+.em {
+    font-size: 1em;
+    background-color: #ffb3e6; 
+}
+
+/* rem */
+.rem {
+    font-size: 1rem;
+    background-color: #b3c6ff; 
+}

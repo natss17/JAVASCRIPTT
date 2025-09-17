@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Atividades</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+            margin: 10px;
+            display: block;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="section">
+        <canvas id="canvas1" width="300" height="300"></canvas>
+    </div>
+
+    <div class="section">
+        <canvas id="canvas2" width="300" height="300"></canvas>
+    </div>
+
+    <div class="section">
+        <canvas id="canvas3" width="300" height="300"></canvas>
+    </div>
+
+    <div class="section">
+        <canvas id="canvas4_2" width="300" height="300"></canvas>
+    </div>
+
+    <div class="section">
+        <canvas id="canvas4_3" width="300" height="300"></canvas>
+    </div>
+
+    <script>
+        // Função para pintar o fundo azul claro em cada canvas
+        function setBackground(ctx) {
+            ctx.fillStyle = 'lightblue';
+            ctx.fillRect(0, 0, 300, 300);
+        }
+
+        // 1. Quadrado Verde
+        function drawSquare() {
+            var ctx1 = document.getElementById('canvas1').getContext('2d');
+            setBackground(ctx1)
+            ctx1.fillStyle = 'green'
+            ctx1.fillRect(50, 50, 200, 200);
+        }
+        drawSquare();
+
+        // 2. Circulo Vermelho
+        function drawCircle() {
+            var ctx2 = document.getElementById('canvas2').getContext('2d');
+            setBackground(ctx2)
+            ctx2.beginPath()
+            ctx2.arc(150, 150, 60, 0, Math.PI * 2);
+            ctx2.fillStyle = 'red'
+            ctx2.fill();
+        }
+        drawCircle();
+
+        // 3. Carinha Feliz
+        function drawSmiley() {
+            var ctx3 = document.getElementById('canvas3').getContext('2d');
+            setBackground(ctx3);
+            // Cabeça
+            ctx3.beginPath();
+            ctx3.arc(150, 150, 80, 0, Math.PI * 2);
+            ctx3.fillStyle = "pink"
+            ctx3.fill();
+            ctx3.stroke();
+            // Olho esquerdo
+            ctx3.beginPath();
+            ctx3.arc(120, 130, 10, 0, Math.PI * 2);
+            ctx3.fillStyle = "black"
+            ctx3.fill();
+            // Olho direito
+            ctx3.beginPath();
+            ctx3.arc(180, 130, 10, 0, Math.PI * 2);
+            ctx3.fillStyle = "black"
+            ctx3.fill();
+            // Boca
+            ctx3.beginPath();
+            ctx3.arc(150, 160, 40, 0, Math.PI);
+            ctx3.stroke();
+        }
+        drawSmiley();
+
+        // 4.2 Casa Rosa
+        function drawHouse() {
+            var ctx4_2 = document.getElementById('canvas4_2').getContext('2d');
+            setBackground(ctx4_2);
+            // Bas
+            ctx4_2.fillStyle = 'pink';
+            ctx4_2.fillRect(100, 150, 120, 100);
+            // Telhado
+            ctx4_2.beginPath();
+            ctx4_2.fillStyle = 'brown';
+            ctx4_2.moveTo(100, 150);
+            ctx4_2.lineTo(160, 100);
+            ctx4_2.lineTo(220, 150);
+            ctx4_2.closePath();
+            ctx4_2.fill();
+            // Porta
+            ctx4_2.fillStyle = 'blue';
+            ctx4_2.fillRect(150, 190, 30, 60);
+        }
+        drawHouse();
+
+        // 4.3 Bandeira do Japão
+        function drawJapanFlag() {
+            var ctx4_3 = document.getElementById('canvas4_3').getContext('2d');
+            setBackground(ctx4_3);
+            // Fundo branco da bandeira
+            ctx4_3.fillStyle = 'white';
+            ctx4_3.fillRect(50, 80, 200, 140);
+            // Círculo vermelho
+            ctx4_3.beginPath();
+            ctx4_3.arc(150, 150, 40, 0, Math.PI * 2);
+            ctx4_3.fillStyle = 'red';
+            ctx4_3.fill();
+        }
+        drawJapanFlag();
+    </script>
+</body>
+</html>
