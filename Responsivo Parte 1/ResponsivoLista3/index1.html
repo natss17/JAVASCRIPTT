@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Troca de Banner Automática</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background-color: #f0f0f0;
+    }
+    img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <img id="banner" src="" alt="Banner Responsivo">
+
+  <script>
+    const banner = document.getElementById("banner")
+
+    function trocarBanner() {
+      if (window.innerWidth <= 600) {
+        banner.src = "bannermobile.png"
+      } else {
+        banner.src = "bannerdesktop.jpg"
+      }
+    }
+
+    
+    trocarBanner()
+
+   
+    window.addEventListener("resize", trocarBanner)
+  </script>
+</body>
+</html>

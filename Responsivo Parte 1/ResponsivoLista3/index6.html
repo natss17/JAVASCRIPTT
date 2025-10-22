@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banner Responsivo</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+<body>
+  <img id="banner" src="" alt="Banner Responsivo">
+
+  <script>
+    function trocarBanner() {
+      const largura = window.innerWidth
+      const banner = document.getElementById("banner")
+
+      if (largura < 600) {
+        banner.src = "bannermobile.jpg"
+      } else if (largura >= 600 && largura <= 1024) {
+        banner.src = "bannertablet.jpg"
+      } else {
+        banner.src = "bannercomp.jpg"
+      }
+    }
+
+    window.addEventListener("load", trocarBanner)
+    window.addEventListener("resize", trocarBanner)
+  </script>
+</body>
+</html>

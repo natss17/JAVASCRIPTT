@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Imagem</title>
+    <style>
+        body {
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        img {
+            display: none; /* Começa escondida */
+            width: 500px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="toggleButton">Mostrar/Esconder</button>
+    <br>
+    <img id="minhaImagem" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=80" alt="Praia">
+
+    <script>
+        const button = document.getElementById('toggleButton');
+        const imagem = document.getElementById('minhaImagem');
+
+        button.addEventListener('click', () => {
+            if (imagem.style.display === 'none') {
+                imagem.style.display = 'block';
+            } else {
+                imagem.style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
+</html>

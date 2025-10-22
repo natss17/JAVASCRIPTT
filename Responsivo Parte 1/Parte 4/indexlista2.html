@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troca de Imagem - Lâmpada</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        img {
+            cursor: pointer;
+            width: 150px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <img id="lampada" src="https://img.icons8.com/ios/452/light-bulb.png" alt="Lâmpada">
+    <script>
+        const lampada = document.getElementById('lampada');
+        let isAcesa = false;
+
+        lampada.addEventListener('click', () => {
+            if (isAcesa) {
+                lampada.src = 'https://img.icons8.com/ios/452/light-bulb.png'; // Imagem da lâmpada apagada
+                lampada.alt = 'Lâmpada apagada';
+            } else {
+                lampada.src = 'https://img.icons8.com/ios-filled/452/light-bulb.png'; // Imagem da lâmpada acesa
+                lampada.alt = 'Lâmpada acesa';
+            }
+            isAcesa = !isAcesa; // Alterna o estado
+        });
+    </script>
+</body>
+</html>

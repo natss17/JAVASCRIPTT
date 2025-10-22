@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troca de Foto de Perfil</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 3px solid #333;
+            object-fit: cover;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Foto de Perfil</h2>
+    <button id="trocarFotoBtn">Trocar Foto</button>
+    <br>
+    <img id="fotoPerfil" src="https://www.capitalfm.com/news/tv-film/outer-banks-cast/sarah-cameron-madelyn-cline/" alt="Foto de Perfil">
+
+    <script>
+        const button = document.getElementById('trocarFotoBtn');
+        const foto = document.getElementById('fotoPerfil');
+
+        // Imagem alternativa
+        const novaFoto = "https://br.pinterest.com/pin/297870962873994898/";
+
+        button.addEventListener('click', () => {
+            // Troca a imagem
+            if(foto.src === novaFoto){
+                // Volta para a foto original
+                foto.src = "https://www.capitalfm.com/news/tv-film/outer-banks-cast/sarah-cameron-madelyn-cline/";
+            } else {
+                foto.src = novaFoto;
+            }
+        });
+    </script>
+
+</body>
+</html>

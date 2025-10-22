@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <img id="carrossel" src="" width="300"><br><br>
+  <button id="prev">Anterior</button>
+  <button id="next">Próxima</button>
+
+  <script>
+    const imagens = ["gato1.jpg", "gato2.jpg", "gato3.avif"];
+    let index = 0;
+
+    const carrossel = document.getElementById("carrossel");
+    const prev = document.getElementById("prev");
+    const next = document.getElementById("next");
+
+    function mostrarImagem() {
+      carrossel.src = imagens[index];
+    }
+
+    prev.addEventListener("click", () => {
+      index = (index - 1 + imagens.length) % imagens.length;
+      mostrarImagem();
+    });
+
+    next.addEventListener("click", () => {
+      index = (index + 1) % imagens.length;
+      mostrarImagem();
+    });
+
+    mostrarImagem(); 
+  </script>
+</body>
+</html>

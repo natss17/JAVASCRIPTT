@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <img id="perfil" src="perfil1.jpg" width="150" style="border-radius:50%;">
+  <br><br>
+  <button id="trocarBtn">Trocar Foto</button>
+
+  <script>
+    const perfil = document.getElementById("perfil");
+    const btn = document.getElementById("trocarBtn");
+    let trocada = false;
+
+    btn.addEventListener("click", () => {
+      trocada = !trocada;
+      perfil.src = trocada ? "perfil2.jpg" : "perfil1.jpg";
+    });
+  </script>
+</body>
+</html>

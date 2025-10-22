@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <button id="toggleBtn">Mostrar/Esconder</button>
+  <br><br>
+  <img id="foto" src="selena.webp" width="200" style="display:none;">
+
+  <script>
+    const btn = document.getElementById("toggleBtn");
+    const foto = document.getElementById("foto");
+
+    btn.addEventListener("click", () => {
+      foto.style.display = foto.style.display === "none" ? "block" : "none";
+    });
+  </script>
+</body>
+</html>

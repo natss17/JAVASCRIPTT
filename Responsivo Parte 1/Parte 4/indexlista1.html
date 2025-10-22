@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>questao 1</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: rgb(230, 230, 140); 
+    }
+
+    h1 {
+      margin: 20px 0;
+    }
+
+    #banner {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(221, 230, 104, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>Banner Dogs 😁 🐶</h1>
+  <img id="banner" src="" alt="Banner de Cachorro">
+
+  <script>
+    function trocarBanner() {
+      const largura = window.innerWidth;
+      const banner = document.getElementById("banner");
+
+      if (largura < 600) {
+        banner.src = "https://placedog.net/500/300?id=1"
+      } else {
+        banner.src = "https://placedog.net/800/400?id=2"
+      }
+    }
+
+    trocarBanner();
+    window.addEventListener("resize", trocarBanner);
+  </script>
+</body>
+</html>
+
+
+
+
